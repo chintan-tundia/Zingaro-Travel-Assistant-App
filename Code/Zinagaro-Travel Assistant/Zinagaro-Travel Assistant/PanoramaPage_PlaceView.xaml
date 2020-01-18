@@ -1,0 +1,233 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Zinagaro_Travel_Assistant.PanoramaPage_PlaceView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
+
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Click="ApplicationBarMenuItem_Click" Text="Home" />
+                <shell:ApplicationBarMenuItem Text="Settings" />
+            </shell:ApplicationBar.MenuItems>
+
+            <shell:ApplicationBarIconButton IconUri="/Images/favs.addto.png" Text="mark"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/questionmark.png" Text="help"/>
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush  Opacity="0.6" ImageSource="Images/50brightlonavala.jpg" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <phone:Panorama  x:Name="Pan" Foreground="White" Title="Lonavala">
+
+            <!--Panorama item one-->
+            <phone:PanoramaItem Header="Description">
+                <Grid>
+                    <ListBox Margin="0,0,5,0">
+                        <TextBlock x:Name="Description" FontWeight="Medium" Foreground="WhiteSmoke" TextWrapping="Wrap">
+							<Run Text="Lonavla officially Lonavala is a town and a hill station Municipal Council in Pune district in the Indian State of Maharashtra. It is about 64 km away from the city of Pune, 96 kilometres from the city of Mumbai. It is known for its production of the hard candy chikki and is also a major stop on the railway line connecting Mumbai and Pune. From the Mumbai suburbs, local trains are available from Karjat. Both the Mumbai-Pune Expressway as well as the Mumbai-Chennai highway pass through Lonavla. Lonavla is also home to INS Shivaji (formerly HMIS Shivaji) which is the Indian Navy's Premier Technical Training Institute. The name Lonavla derives from Len (Prakrit, A resting place carved from stone) and Avali (Prakrit, series). Lonavli in Prakrit is a place which has a series of such Len around it."/>
+                        </TextBlock>
+                    </ListBox>
+                </Grid>
+
+            </phone:PanoramaItem>
+
+            <!--Panorama item two-->
+            <phone:PanoramaItem Header="Places To Visit">
+
+                <ListBox Margin="0,0,-12,0">
+                    <StackPanel VerticalAlignment="Stretch">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <StackPanel  Grid.Row="0" Grid.Column="0">
+                            <Border Margin="0,9.5,0,0"
+								Height="79" Width="79" >
+                                <Image Source="Images/lonavala_ekviradevitemple_thumb.jpg"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Row="0"  Grid.Column="1" Margin="14.5,5,0,0">
+                            <TextBlock Foreground="White" Text="Ekvira Devi Temple"/>
+                            <TextBlock Foreground="White" FontSize="14" TextWrapping="Wrap" Text="Located close to Karla caves, the Ekavira Devi Temple is a splendid spiritu..."/>
+
+                            <Image Margin="-250,0,0,0" Source="Images/rating.png" Height="18"/>
+                        </StackPanel>
+                        <StackPanel  Grid.Row="1" Grid.Column="0">
+                            <Border Margin="0,9.5,0,0"
+								Height="79" Width="79" >
+                                <Image Source="Images\lohagad-fort_thumb.jpg"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1"   Grid.Column="1" Margin="14.5,5,0,0">
+                            <TextBlock Foreground="White" Text="Lohgadh Fort"/>
+                            <TextBlock Foreground="White" FontSize="14" TextWrapping="Wrap" Text="Thrilling and absolutely breathtaking, this hill fort is certainly a sight to behold... "/>
+                            <Image Margin="-250,0,0,0" Source="Images/rating.png" Height="18"/>
+                        </StackPanel>
+                    </Grid>
+                    </StackPanel>
+                </ListBox>
+
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="Accomodation">
+                <ListBox Margin="0,0,-12,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <StackPanel  Grid.Row="0" Grid.Column="0">
+                            <Border Margin="0,9.5,0,0"
+								Height="79" Width="79" >
+                                <Image Source="Images/lonavala_ekviradevitemple_thumb.jpg"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Row="0"  Grid.Column="1" Margin="14.5,5,0,0">
+                            <TextBlock Foreground="White" Text="Ekvira Devi Temple"/>
+                            <TextBlock Foreground="White" FontSize="14" TextWrapping="Wrap" Text="Located close to Karla caves, the Ekavira Devi Temple is a splendid spiritu..."/>
+
+                            <Image Margin="-250,0,0,0" Source="Images/rating.png" Height="18"/>
+                        </StackPanel>
+                        <StackPanel  Grid.Row="1" Grid.Column="0">
+                            <Border Margin="0,9.5,0,0"
+								Height="79" Width="79" >
+                                <Image Source="Images\lohagad-fort_thumb.jpg"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1"   Grid.Column="1" Margin="14.5,5,0,0">
+                            <TextBlock Foreground="White" Text="Lohgadh Fort"/>
+                            <TextBlock Foreground="White" FontSize="14" TextWrapping="Wrap" Text="Thrilling and absolutely breathtaking, this hill fort is certainly a sight to behold... "/>
+                            <Image Margin="-250,0,0,0" Source="Images/rating.png" Height="18"/>
+                        </StackPanel>
+                    </Grid>
+                </ListBox>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="Eateries">
+
+                <ListBox Margin="0,0,-12,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <StackPanel  Grid.Row="0" Grid.Column="0">
+                            <Border Margin="0,9.5,0,0"
+								Height="79" Width="79" >
+                                <Image Source="Images/lonavala_ekviradevitemple_thumb.jpg"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Row="0"  Grid.Column="1" Margin="14.5,5,0,0">
+                            <TextBlock Foreground="White" Text="Ekvira Devi Temple"/>
+                            <TextBlock Foreground="White" FontSize="14" TextWrapping="Wrap" Text="Located close to Karla caves, the Ekavira Devi Temple is a splendid spiritu..."/>
+
+                            <Image Margin="-250,0,0,0" Source="Images/rating.png" Height="18"/>
+                        </StackPanel>
+                        <StackPanel  Grid.Row="1" Grid.Column="0">
+                            <Border Margin="0,9.5,0,0"
+								Height="79" Width="79" >
+                                <Image Source="Images\lohagad-fort_thumb.jpg"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1"   Grid.Column="1" Margin="14.5,5,0,0">
+                            <TextBlock Foreground="White" Text="Lohgadh Fort"/>
+                            <TextBlock Foreground="White" FontSize="14" TextWrapping="Wrap" Text="Thrilling and absolutely breathtaking, this hill fort is certainly a sight to behold... "/>
+                            <Image Margin="-250,0,0,0" Source="Images/rating.png" Height="18"/>
+                        </StackPanel>
+                    </Grid>
+                </ListBox>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="Other Places">
+
+                <ListBox Margin="0,0,-12,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <StackPanel  Grid.Row="0" Grid.Column="0">
+                            <Border Margin="0,9.5,0,0"
+								Height="79" Width="79" >
+                               <Image Source="Images/lonavala_ekviradevitemple_thumb.jpg"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Row="0"  Grid.Column="1" Margin="14.5,5,0,0">
+                            <TextBlock Foreground="White" Text="Ekvira Devi Temple"/>
+                            <TextBlock Foreground="White" FontSize="14" TextWrapping="Wrap" Text="Located close to Karla caves, the Ekavira Devi Temple is a splendid spiritu..."/>
+
+                            <Image Margin="-250,0,0,0" Source="Images/rating.png" Height="18"/>
+                        </StackPanel>
+                        <StackPanel  Grid.Row="1" Grid.Column="0">
+                            <Border Margin="0,9.5,0,0"
+								Height="79" Width="79" >
+                                <Image Source="Images\lohagad-fort_thumb.jpg"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1"   Grid.Column="1" Margin="14.5,5,0,0">
+                            <TextBlock Foreground="White" Text="Lohgadh Fort"/>
+                            <TextBlock Foreground="White" FontSize="14" TextWrapping="Wrap" Text="Thrilling and absolutely breathtaking, this hill fort is certainly a sight to behold... "/>
+                            <Image Margin="-250,0,0,0" Source="Images/rating.png" Height="18"/>
+                        </StackPanel>
+                    </Grid>
+                </ListBox>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="Photos">
+                <Grid>
+                <StackPanel Margin="30,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                    <ListBox Name="lstPhotos">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Toolkit:WrapPanel VerticalAlignment="Stretch"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border Grid.Column="0"  Height="150" Width="150" Margin="20,10,0,10" BorderBrush="White"  BorderThickness="2" >
+                                    <Image Stretch="Fill"  Source="{Binding Path=Path}"  Tap="Image_Tap"/>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                </Grid>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="Map">
+                <StackPanel>
+                    <!--<maps:Map ZoomLevel="5"  Height="543" HorizontalAlignment="Left" Name="map1" VerticalAlignment="Top" Width="480" Margin="-12,0,0,0" />-->
+
+                </StackPanel>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

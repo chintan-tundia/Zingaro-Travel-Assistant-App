@@ -1,0 +1,23 @@
+
+
+2)http://www.ospltrip.com/travel-api/
+
+3)http://www.cleartrip.com/api/
+	http://www.cleartrip.com/flights
+
+	http://www.cleartrip.com/api/docs/air-api/index.shtml
+		->It contains api references.
+
+FOR API KEY :-YOU NEED TO DEPOSIT SOME MONEY.	
+
+4)https://developer.flightstats.com/api-docs/how_to
+	https://developer.flightstats.com/api-docs/
+
+5)http://www.travelapi.co.in/travelapi.aspx
+	It is actually for all travel purposes(not flight specifically)
+	->loading Destinations
+	->Search result for route avail
+	->Pickup Points & Dropping Points:
+	->Booking
+	->Ticket Generation:
+	->Ticket Cancellation:
